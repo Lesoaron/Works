@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leso — Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="c"></canvas>
+
+<div id="loader">
+  <div class="ld-ring"></div>
+</div>
+
+<nav id="nav">
+  <a href="#home" class="logo">Leso</a>
+  <ul class="nav-ul" id="navUl">
+    <li><a href="#home"    class="nl active">Home</a></li>
+    <li><a href="#works"   class="nl">Works</a></li>
+    <li><a href="#reviews" class="nl">Reviews</a></li>
+    <li><a href="#contact" class="nl">Contact</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<div id="sp"><div id="sb"></div></div>
+
+<aside id="rail" aria-hidden="true">
+  <div class="rail-line"><div class="rail-fill" id="railFill"></div></div>
+  <div class="rail-dots">
+    <span class="rail-dot active" data-s="home"><i></i><em>Home</em></span>
+    <span class="rail-dot" data-s="works"><i></i><em>Works</em></span>
+    <span class="rail-dot" data-s="reviews"><i></i><em>Reviews</em></span>
+    <span class="rail-dot" data-s="contact"><i></i><em>Contact</em></span>
+  </div>
+</aside>
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="s s-home">
+  <div class="home-wrap">
+    <p class="tag r">Video Editor · Motion Designer</p>
+    <h1 class="r">
+      Crafting stories<br/>
+      <em>frame by frame.</em>
+    </h1>
+    <p class="hero-sub r">Short-form content and SaaS explainers that make people stop, watch, and act.</p>
+    <div class="hero-btns r">
+      <a href="#contact" class="btn-fill">Work with me</a>
+      <a href="#works"   class="btn-line">View works</a>
+    </div>
+    <div class="stats r">
+      <div class="stat">
+        <span class="sn"><span class="sc" data-t="25">0</span>+</span>
+        <span class="sl">Projects Delivered</span>
+      </div>
+      <div class="sdiv"></div>
+      <div class="stat">
+        <span class="sn"><span class="sc" data-t="5">0</span>+</span>
+        <span class="sl">Clients</span>
+      </div>
+      <div class="sdiv"></div>
+      <div class="stat">
+        <span class="sn"><span class="sc" data-t="16">0</span>+</span>
+        <span class="sl">hours Online</span>
+      </div>
+    </div>
+  </div>
+  <div class="sc-hint"><div class="sc-line"></div></div>
+</section>
+
+<!-- WORKS -->
+<section id="works" class="s s-works">
+  <div class="sh r">
+    <h2>The edit <em>speaks.</em></h2>
+  </div>
+  <div class="wg">
+
+    <article class="wc r" data-d="0">
+      <div class="wc-num">01</div>
+      <div class="embed-w">
+        <iframe src="https://www.youtube.com/embed/E9rvI8pi648?rel=0&modestbranding=1"
+          title="UI Animation" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="wc-info">
+        <h3>UI Animation</h3>
+      </div>
+    </article>
+
+    <article class="wc r" data-d="100">
+      <div class="wc-num">02</div>
+      <div class="embed-w">
+        <iframe src="https://www.youtube.com/embed/JzAKf0t8u8w?rel=0&modestbranding=1"
+          title="SaaS" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="wc-info">
+        <h3>SaaS Explainers</h3>
+      </div>
+    </article>
+
+    <article class="wc r" data-d="200">
+      <div class="wc-num">03</div>
+      <div class="embed-w embed-short">
+        <iframe src="https://www.youtube.com/embed/m0gl1fVioAg?rel=0&modestbranding=1"
+          title="Reels Edit" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="wc-info">
+        <h3>Reels Edit</h3>
+      </div>
+    </article>
+
+    <article class="wc r" data-d="300">
+      <div class="wc-num">04</div>
+      <div class="embed-w">
+        <iframe src="https://www.youtube.com/embed/StdYbs8HRSU?rel=0&modestbranding=1"
+          title="Featured Edit" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="wc-info">
+        <h3>Event promo</h3>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="s s-services">
+  <div class="sh r">
+    <h2>What I <em>do.</em></h2>
+  </div>
+  <div class="svg">
+    <div class="sv r" data-d="0">
+      <div class="sv-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.5" y="5.5" width="14" height="13" rx="1.6"/>
+          <path d="M16.5 9.5l5-2.7v10.4l-5-2.7"/>
+        </svg>
+      </div>
+      <span class="sv-num">01</span>
+      <h3>SaaS Explainers</h3>
+      <p>SaaS explainers with good pacing with crisp sound design and impactful motion graphics.</p>
+      <div class="sv-tags">
+        <span>Motion Graphics</span><span>Sound Design</span>
+      </div>
+    </div>
+    <div class="sv r" data-d="100">
+      <div class="sv-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2.5 4.5 13h6l-1 8.5L19.5 11h-6l-1.5-8.5z"/>
+        </svg>
+      </div>
+      <span class="sv-num">02</span>
+      <h3>Short-Form Content</h3>
+      <p>Viral Reels and Shorts build to trend</p>
+      <div class="sv-tags">
+        <span>Reels &amp; Shorts</span><span>Captions &amp; FX</span>
+      </div>
+    </div>
+    <div class="sv r" data-d="200">
+      <div class="sv-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.5" y="5" width="19" height="14" rx="3"/>
+          <path d="M10.5 9.3v5.4l4.8-2.7z" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <span class="sv-num">03</span>
+      <h3>YouTube Videos</h3>
+      <p>Long form Youtube videos with clean cuts and viral flow</p>
+      <div class="sv-tags">
+        <span>Long-Form Edits</span><span>Typography</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="s s-reviews">
+  <div class="sh r">
+    <h2>What clients <em>say.</em></h2>
+  </div>
+  <div class="rg">
+    <div class="rv r" data-d="0">
+      <div class="rv-stars">★★★★★</div>
+      <p class="rv-q"><!-- Add review here --></p>
+      <div class="rv-who">
+        <div class="rv-av"></div>
+        <div class="rv-nm"><strong><!-- Name --></strong><span><!-- Role --></span></div>
+      </div>
+    </div>
+    <div class="rv r" data-d="100">
+      <div class="rv-stars">★★★★★</div>
+      <p class="rv-q"></p>
+      <div class="rv-who">
+        <div class="rv-av"></div>
+        <div class="rv-nm"><strong></strong><span></span></div>
+      </div>
+    </div>
+    <div class="rv r" data-d="200">
+      <div class="rv-stars">★★★★★</div>
+      <p class="rv-q"></p>
+      <div class="rv-who">
+        <div class="rv-av"></div>
+        <div class="rv-nm"><strong></strong><span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="s s-contact">
+  <div class="ct r">
+    <canvas id="ctParticles" class="ct-particles"></canvas>
+    <h2>Ready to create<br/><em>something great?</em></h2>
+    <div class="ct-spacer"></div>
+    <a href="https://x.com/LesoAron/" target="_blank" rel="noopener" class="ct-btn">Send me a DM</a>
+    <div class="ct-socials">
+      <a href="https://x.com/LesoAron/" target="_blank" rel="noopener" class="ct-ico" aria-label="X/Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://discord.com/users/1247214360493822114" target="_blank" rel="noopener" class="ct-ico" aria-label="Discord">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.102 18.079.114 18.1.132 18.111a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.62.874-1.275 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+      </a>
+      <a href="mailto:leso.edits@gmail.com" class="ct-ico" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="fi">
+    <a href="#home" class="logo">Leso</a>
+    <p>© 2026 Leso. All rights reserved.</p>
+    <div class="f-links">
+      <a href="https://x.com/LesoAron/" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://discord.com/users/1247214360493822114" target="_blank" rel="noopener">Discord</a>
+      <a href="mailto:leso.edits@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="scene.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
