@@ -1,15 +1,5 @@
-# Leso — Video Editor Portfolio
 
-A premium 3D scroll-animated portfolio for video editor **Leso**.
 
-## Features
-- **Real 3D morphing objects** powered by Three.js — geometry shifts between an icosahedron, torus, octahedron, torus knot, and smooth sphere as you scroll through sections
-- **Scroll-driven 3D transitions** with particle clouds during morphs
-- **Mouse-parallax** — the 3D object tracks your cursor
-- **Three-colour system** — Deep Black `#0a0a0f` · Electric Violet `#7c3aed` · Warm Gold `#f5c842`
-- **Reveal animations**, counter stats, skill bars
-- Fully responsive (mobile + desktop)
-- Zero build tools — plain HTML/CSS/JS
 
 ## Files
 | File | Purpose |
