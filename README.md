@@ -11,20 +11,6 @@ A premium 3D scroll-animated portfolio for video editor **Leso**.
 - Fully responsive (mobile + desktop)
 - Zero build tools — plain HTML/CSS/JS
 
-## Deploy to GitHub Pages
-
-1. Create a GitHub repository (e.g. `portfolio`)
-2. Upload all 5 files:
-   ```
-   index.html
-   style.css
-   scene.js
-   main.js
-   README.md
-   ```
-3. Go to **Settings → Pages → Source → Deploy from branch → main / (root)**
-4. Your site will be live at `https://<username>.github.io/<repo>/`
-
 ## Files
 | File | Purpose |
 |------|---------|
