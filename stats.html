@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Stats</title>
+<meta name="robots" content="noindex, nofollow"/>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b0b0d;
+    color: #f2f2f2;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  }
+  .box {
+    width: 320px;
+    max-width: 90vw;
+    text-align: center;
+  }
+  input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #16161a;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+  }
+  button {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #f2f2f2;
+    color: #0b0b0d;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .stats {
+    display: none;
+  }
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #222;
+    font-size: 16px;
+  }
+  .stat-row span:last-child {
+    font-weight: 700;
+  }
+  .err {
+    color: #ff6b6b;
+    font-size: 13px;
+    margin-top: 8px;
+    display: none;
+  }
+  h2 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div id="gate">
+      <h2>Enter password</h2>
+      <input id="pw" type="password" placeholder="Password" autofocus/>
+      <button id="go">View stats</button>
+      <p class="err" id="err">Wrong password.</p>
+    </div>
+    <div class="stats" id="stats">
+      <h2>Your visits</h2>
+      <div class="stat-row"><span>Today</span><span id="today">-</span></div>
+      <div class="stat-row"><span>This month</span><span id="month">-</span></div>
+      <div class="stat-row"><span>All time</span><span id="total">-</span></div>
+    </div>
+  </div>
+
+  <script>
+    const goBtn = document.getElementById('go');
+    const pwInput = document.getElementById('pw');
+    const err = document.getElementById('err');
+
+    async function checkStats(pw) {
+      err.style.display = 'none';
+      try {
+        const res = await fetch('/api/stats?key=' + encodeURIComponent(pw));
+        if (res.status === 401) {
+          err.style.display = 'block';
+          return;
+        }
+        const data = await res.json();
+        document.getElementById('today').textContent = data.today;
+        document.getElementById('month').textContent = data.thisMonth;
+        document.getElementById('total').textContent = data.total;
+        document.getElementById('gate').style.display = 'none';
+        document.getElementById('stats').style.display = 'block';
+      } catch (e) {
+        err.textContent = 'Something went wrong.';
+        err.style.display = 'block';
+      }
+    }
+
+    goBtn.addEventListener('click', () => checkStats(pwInput.value));
+    pwInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') checkStats(pwInput.value);
+    });
+  </script>
+</body>
+</html>
